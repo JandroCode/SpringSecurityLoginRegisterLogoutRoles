@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Insert title here</title>
+<style>
+	form{
+		margin:20px 40%;
+	}
+	
+	.danger{
+		color:red;
+	}
+</style>
+
+</head>
+<body>
+
+	
+
+	
+		<form th:action="@{/login}"  method="POST">
+		<div th:if="${param.error}" class="danger">Credenciales incorrectas!</div>
+		<h4>Log in</h4>
+			<input type="text" placeholder="Username"  name="username"/><br><br>
+			<input type="password" placeholder="Contraseña" name="password"/><br><br>
+			<input type="submit" value="Log in"/>
+			
+		</form>
+
+	
+	
+	
+
+</body>
+</html>
