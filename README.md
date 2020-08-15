@@ -1,5 +1,6 @@
 # SpringSecurityLoginRegisterLogoutRoles
 Configuración de spring security para poder registrar y hacer login de usuarios con contraseña encriptada
+además de roles
 
 En este código tenemos registro de usuarios con la contraseña encriptada,
 login personalizado y cierre de sesión,
