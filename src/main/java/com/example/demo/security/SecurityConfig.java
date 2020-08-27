@@ -41,7 +41,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		http.authorizeRequests().antMatchers("/","/register/**","/login").permitAll()
 		// Asignar permisos a URLs por ROLES
 		.antMatchers("/admin/**").hasAnyAuthority("ADMIN")
-		.antMatchers("/usuarios/**").hasAnyAuthority("USER","ADMINISTRADOR")
+		.antMatchers("/usuarios/**").hasAnyAuthority("USER","ADMIN")
 			.anyRequest().authenticated()
 		.and()
 			.formLogin().loginPage("/login").defaultSuccessUrl("/home",true).failureUrl("/login?error=true").permitAll()
